@@ -27,7 +27,7 @@ class Reproductor extends Multimedia {
     setInicio(time) {
         const idWeb = document.getElementById(this.getterID);
         if(!idWeb) return;
-        idWeb.setAttribute("scr", `${this.getUrl}?start=${time}`)
+        idWeb.setAttribute("src", `${this.getUrl}?start=${time}`)
     };
 };
 
@@ -47,6 +47,7 @@ music.playMultimedia();
 
 const movie = new Reproductor("https://www.youtube.com/embed/5sXPBIA4zH4", "iMovie");
 movie.playMultimedia();
+movie.setInicio(23);
 
 const serie = new Reproductor("https://www.youtube.com/embed/rE92bDAlPXI", "iSerie");
 serie.playMultimedia();
